@@ -39,9 +39,11 @@ tasksDiv.addEventListener("click", (e) => {
     //delete button
     if(e.target.classList.contains("del")){
         //remove task from local storage 
-         deleteTaskWith(e.target.parentElemnent.getAttribute("data-id"));
+        deleteTaskWith(e.target.parentElement.getAttribute("data-id"));
+
         //remove elemnt from page
-        e.target.parentElemnent.remove();
+        e.target.parentElement.remove();
+
     }
     //task element 
     if (e.target.classList.contains("task")){
