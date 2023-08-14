@@ -70,11 +70,12 @@ body {
 }
 
 .tasks .task:hover {
-  background-color: #f7f7f7;
+  background-color: #2cd62c2b;
 }
 
 .tasks .task.done {
   opacity: 0.5;
+  background-color: #2cd62c2b;
 }
 
 .tasks .task span {
