@@ -1,6 +1,6 @@
 let input = document.querySelector(".input");
-let submit = document.querySelector(".add");
-let submit2 = document.querySelector(".add2");
+let addButton = document.querySelector(".add");
+let submit2Button = document.querySelector(".submit2");
 let tasksDiv = document.querySelector(".tasks");
 
 
@@ -14,25 +14,26 @@ if(localStorage.getItem("tasks")){
 //Trigger get data from local storage function
 getDataFromLocalStorage();
 
-//Add Task
-submit.onclick = function () {
 
-    if (input.value !== ""){
-        addTaskToArray(input.value);
-        input.value = ""; //Empty input field
-
+// Add Task
+addButton.onclick = function () {
+    if (input.value !== "") {
+      addTaskToArray(input.value);
+      input.value = "";
     }
-
-};
-//delete all Tasks
-submit2.onclick = function () {
-    tasksDiv.innerHTML = ""; // Clear tasks from the container
-
-    arrayOfTasks = []; // Clear the array of tasks
-
-    window.localStorage.removeItem("tasks"); // Remove tasks from local storage
-};
-
+  };
+  
+  // Submit2 Button
+  submit2Button.onclick = function () {
+    // Clear tasks from the container
+    tasksDiv.innerHTML = "";
+  
+    // Clear the array of tasks
+    arrayOfTasks = [];
+  
+    // Remove tasks from local storage
+    window.localStorage.removeItem("tasks");
+  };
 //click on task element 
 tasksDiv.addEventListener("click", (e) => {
     //delete button
